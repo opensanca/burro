@@ -1,0 +1,9 @@
+language: javascript
+install:
+  - npm install
+  - cd react && npm install && cd ..
+scripts:
+  - npm run build:css
+  - cd react && npm run test:cov
+after_sucess:
+  - cdnjs-importer -g git@github.com:opensanca/burro.git

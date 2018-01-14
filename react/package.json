@@ -1,0 +1,14 @@
+{
+  "name": "burro-react",
+  "version": "1.0.0",
+  "description": "Biblioteca de Componentes React para o Burro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Guilherme Diego <guilherme@monumentum.io>",
+  "license": "MIT"
+}

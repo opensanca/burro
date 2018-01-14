@@ -1,0 +1,36 @@
+{
+  "name": "burro",
+  "version": "1.0.0",
+  "description": "A biblioteca de components do open sanca",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass _sass/index.sass -o dist/",
+    "postcss": "postcss dist/index.css > dist/index.min.css",
+    "rename": "mv dist/index.css dist/bundle.css && mv dist/index.min.css dist/bundle.min.css",
+    "clear": "rm -rf dist",
+    "build:css": "npm run clear && npm run sass && npm run postcss && npm run rename"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/opensanca/burro.git"
+  },
+  "keywords": [
+    "vuejs",
+    "react",
+    "angular",
+    "sass"
+  ],
+  "author": "Guilherme Diego <guilherme@monumentum.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/opensanca/burro/issues"
+  },
+  "homepage": "https://github.com/opensanca/burro#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "cdnjs-importer": "^2.0.0-beta",
+    "node-sass": "^4.7.2",
+    "postcss": "^6.0.16",
+    "postcss-cli": "^4.1.1"
+  }
+}
