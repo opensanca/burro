@@ -1,14 +1,13 @@
 {
   "name": "burro",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A biblioteca de components do open sanca",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass _sass/index.sass -o dist/",
-    "postcss": "postcss dist/index.css > dist/index.min.css",
-    "rename": "mv dist/index.css dist/bundle.css && mv dist/index.min.css dist/bundle.min.css",
-    "clear": "rm -rf dist",
-    "build:css": "npm run clear && npm run sass && npm run postcss && npm run rename"
+    "sass": "node-sass ./_sass/index.sass -o dist/",
+    "postcss": "postcss dist/index.css > dist/bundle.min.css",
+    "move": "mv dist/index.css dist/bundle.css",
+    "build:css": "npm run sass && npm run postcss && npm run move"
   },
   "repository": {
     "type": "git",
@@ -31,6 +30,7 @@
     "cdnjs-importer": "^2.0.0-beta",
     "node-sass": "^4.7.2",
     "postcss": "^6.0.16",
-    "postcss-cli": "^4.1.1"
+    "postcss-cli": "^4.1.1",
+    "surge": "^0.19.0"
   }
 }
