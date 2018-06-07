@@ -6,7 +6,8 @@
   "scripts": {
     "test": "BABEL_ENV=test jest --config config.jest.json --coverage",
     "test:dev": "BABEL_ENV=test jest --config config.jest.json --watch",
-    "storybook": "node .storybook/create_map && start-storybook -p 9001 -c .storybook"
+    "storybook": "node .storybook/create_map && start-storybook -p 9001 -c .storybook",
+    "build": "BABEL_ENV=production rollup --config rollup.config.js"
   },
   "keywords": [
     "react"
@@ -25,7 +26,8 @@
     "jest-enzyme": "^6.0.1",
     "rollup": "^0.60.1",
     "rollup-plugin-babel": "^3.0.4",
-    "rollup-plugin-node-resolve": "^3.3.0"
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-uglify": "^4.0.0"
   },
   "dependencies": {
     "babel-preset-latest": "^6.24.1",
