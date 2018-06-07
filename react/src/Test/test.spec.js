@@ -4,9 +4,9 @@ import { Test } from './';
 
 describe('Test Component', () => {
   it('should render correctly', () => {
-    const name ='burro';
+    const name = 'burro';
     const wrapper = shallow(<Test name={name} />);
 
-    expect(wrapper).toHaveHTML(`<div>${name}</div>`)
+    expect(wrapper).toHaveHTML(`<div>${name}</div>`);
   });
 });

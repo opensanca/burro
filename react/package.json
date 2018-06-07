@@ -7,7 +7,9 @@
     "test": "BABEL_ENV=test jest --config config.jest.json --coverage",
     "test:dev": "BABEL_ENV=test jest --config config.jest.json --watch",
     "storybook": "node .storybook/create_map && start-storybook -p 9001 -c .storybook",
-    "build": "BABEL_ENV=production rollup --config rollup.config.js"
+    "build": "BABEL_ENV=production rollup --config rollup.config.js",
+    "lint": "eslint --config .eslintrc src",
+    "lint:fix": "npm run lint -- --fix"
   },
   "keywords": [
     "react"
@@ -15,13 +17,17 @@
   "author": "Guilherme Diego <guilherme@monumentum.io>",
   "license": "MIT",
   "devDependencies": {
-    "@storybook/cli": "^3.4.6",
     "@storybook/react": "^3.4.6",
     "babel-jest": "^23.0.1",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.9.1",
     "jest": "^23.1.0",
     "jest-enzyme": "^6.0.1",
     "rollup": "^0.60.1",
