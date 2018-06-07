@@ -1,12 +1,16 @@
 language: node_js
 node_js:
-- '7'
+  - '8'
+cache:
+  directories:
+    - ./node_modules
+    - ./react/node_modules
 install:
   - npm install
   - cd react && npm install && cd ..
-scripts:
+script:
   - cd react && npm run test && npm run build && cd ..
-after_scripts:
+after_script:
   - npm run build:css
   - cd react && npm run build && cd ..
 deploy:
