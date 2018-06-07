@@ -1,0 +1,13 @@
+{
+    "presets": [
+        "stage-1",
+        "react",
+        ["env", {
+            "modules": false,
+            "targets": {
+              "browsers": "last 4 years"
+            }
+        }]
+    ],
+    "plugins": ["external-helpers"]
+}
