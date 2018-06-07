@@ -4,8 +4,8 @@
   "description": "Biblioteca de Componentes React para o Burro",
   "main": "index.js",
   "scripts": {
-    "test": "jest --config config.jest.json --coverage",
-    "test:dev": "jest --config config.jest.json --watch",
+    "test": "BABEL_ENV=test jest --config config.jest.json --coverage",
+    "test:dev": "BABEL_ENV=test jest --config config.jest.json --watch",
     "storybook": "node .storybook/create_map && start-storybook -p 9001 -c .storybook"
   },
   "keywords": [
@@ -19,7 +19,10 @@
     "babel-jest": "^23.0.1",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^23.1.0",
+    "jest-enzyme": "^6.0.1",
     "rollup": "^0.60.1",
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-node-resolve": "^3.3.0"

@@ -7,11 +7,16 @@
   ],
   "coverageDirectory": "coverage",
   "coveragePathIgnorePatterns": [
-      "<rootDir>/node_modules/",
-      "*.storybook"
+      "<rootDir>/node_modules/"
+  ],
+  "setupTestFrameworkScriptFile": "./testSetup",
+  "testMatch": [
+    "**/*.spec.js"
   ],
   "collectCoverageFrom": [
-    "src/**/*.js"
+    "src/**/*.js",
+    "!src/**/*.storybook.js",
+    "!src/index.js"
   ],
   "coverageReporters": [
     "html",
