@@ -4,6 +4,9 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+package-lock*
+*/package-lock*
+
 
 # Runtime data
 pids
@@ -57,4 +60,6 @@ typings/
 # dotenv environment variables file
 .env
 
-
+dist
+react/.storybook/requires.js
+react/dist

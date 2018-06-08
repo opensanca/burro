@@ -1,0 +1,23 @@
+{
+  "env": {
+    "production": {
+      "presets": [
+          "stage-1",
+          "react",
+          ["env", {
+              "modules": false,
+              "targets": {
+                "browsers": "last 4 years"
+              }
+          }]
+      ]
+    },
+    "test": {
+      "presets": [
+          "stage-1",
+          "react",
+          "env"
+      ]
+    }
+  }
+}

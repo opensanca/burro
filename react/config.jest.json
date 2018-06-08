@@ -1,0 +1,33 @@
+{
+  "roots": [
+    "src"
+  ],
+  "moduleDirectories": [
+    "node_modules"
+  ],
+  "coverageDirectory": "coverage",
+  "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+  ],
+  "setupTestFrameworkScriptFile": "./testSetup",
+  "testMatch": [
+    "**/*.spec.js"
+  ],
+  "collectCoverageFrom": [
+    "src/**/*.js",
+    "!src/**/*.storybook.js",
+    "!src/index.js"
+  ],
+  "coverageReporters": [
+    "html",
+    "lcov"
+  ],
+  "coverageThreshold": {
+    "global": {
+      "statements": 99,
+      "branches": 99,
+      "functions": 99,
+      "lines": 99
+    }
+  }
+}
