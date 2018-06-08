@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "sass": "node-sass ./_sass/index.sass -o dist/",
-    "postcss": "postcss dist/index.css > dist/bundle.min.css",
-    "move": "mv dist/index.css dist/bundle.css",
-    "build:css": "npm run sass && npm run postcss && npm run move"
+    "postcss": "postcss dist/index.css > dist/index.css",
+    "move": "mkdir dist/0.0.1 && mv dist/index.css dist/0.0.1/bundle.css",
+    "build": "npm run sass && npm run postcss && npm run move"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
   "devDependencies": {
     "autoprefixer": "^7.2.5",
     "cdnjs-importer": "^2.0.0-beta",
+    "cssnano": "^3.10.0",
     "node-sass": "^4.7.2",
     "postcss": "^6.0.16",
     "postcss-cli": "^4.1.1",

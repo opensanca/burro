@@ -60,6 +60,6 @@ typings/
 # dotenv environment variables file
 .env
 
-dist/*.css
+dist
 react/.storybook/requires.js
 react/dist

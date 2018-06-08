@@ -11,10 +11,11 @@ install:
 script:
   - cd react && npm run test && npm run build && cd ..
 after_script:
-  - npm run build:css
+  - npm run build
   - cd react && npm run build && cd ..
 deploy:
   - provider: surge
+    domain: opensanca-burro.surge.sh
     project: "./dist"
     on: master
 env:
