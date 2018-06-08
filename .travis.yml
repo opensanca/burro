@@ -16,8 +16,9 @@ after_script:
 deploy:
   - provider: surge
     domain: opensanca-burro.surge.sh
-    project: "./dist"
-    on: master
+    project: ./dist
+    on:
+      branch: master
 env:
   global:
     secure: KJErYfj1KX9x474Ux8p1me14FRl9ig3MlyFbvDpDyB94lVK6tp5t1Y1eZG9O0hHzLTiHY6pCQEIXTQNfjmeVQcR76yqxpP3Exm76LHR7/YlxWvWTjxbrzoffRZ2jx7cLDSf3uLnzg8IyoX7XRnHRI0oLQdnsTUEn23szjr4am5/593bvqI/iggqS4zP+3BxS+mRqCOJdi9LBgG8IIrGTT7jXHTznT/JxfoTnVaPqr4Xi9waHL+yOKMcg98fjQdzZRBw0dWGW+kfB+HlHXXPF7p+pCgdNejm1vnpCZwS8eIuD2YMBTvphdebcnpI+Lei4XmkcLH0XSgydvT9lEf5ZYQ4NW2GuV5mdd1PiwsgI5WPyHvzJ1jObRFOQieGbfMYdfQqoL4VWoFeS3dGJyMPZPD4dX0hedWqA26ZzlmHn57I5zVcDbwX7+8o5nKkMUVrYGzOEhPsgSJjhqet+K7S9RnFOMekb6dhunh88LgkjpYfI7YlHTMswkZ+DR4I22JW8NUgXUExVTwflIUNINdTWM2B1XApibMlcXsDy24EQla/g2s3EftfKlPctAemRUmskrgg6zYo7tor15wQ6wYCKX+vovgupLDtkYgIQhTw/LnM7vYmbGaZsAUTWh8paenV5pJFRD/XwWC64SQUgT2DTSLUrLqNL1bBryuT9pb29OUw=

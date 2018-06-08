@@ -6,7 +6,7 @@
   "scripts": {
     "sass": "node-sass ./_sass/index.sass -o dist/",
     "postcss": "postcss dist/index.css > dist/index.css",
-    "move": "mkdir dist/0.0.1 && mv dist/index.css dist/0.0.1/bundle.css",
+    "move": "mkdir dist/v0.0.1 && mv dist/index.css dist/v0.0.1/bundle.css",
     "build": "npm run sass && npm run postcss && npm run move"
   },
   "repository": {
