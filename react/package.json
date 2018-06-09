@@ -1,5 +1,5 @@
 {
-  "name": "burro-react",
+  "name": "@opensanca/burro-react",
   "version": "1.0.0",
   "description": "Biblioteca de Componentes React para o Burro",
   "main": "index.js",

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const Test = ({ name }) => (
-  <div>
+  <div className="test">
     { name }
   </div>
 );

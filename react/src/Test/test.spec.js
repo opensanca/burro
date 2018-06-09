@@ -7,6 +7,6 @@ describe('Test Component', () => {
     const name = 'burro';
     const wrapper = shallow(<Test name={name} />);
 
-    expect(wrapper).toHaveHTML(`<div>${name}</div>`);
+    expect(wrapper).toHaveHTML(`<div class="test">${name}</div>`);
   });
 });
