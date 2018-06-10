@@ -21,7 +21,6 @@ jobs:
     - stage: react
       script: cd react && npm run test && npm run lint
       before_deploy:
-        - cd react
         - npm run build
       deploy:
         provider: npm

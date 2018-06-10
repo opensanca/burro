@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sass": "node-sass ./_sass/index.sass -o dist/",
-    "postcss": "postcss dist/index.css > dist/index.css",
-    "move": "mkdir dist/v0.0.1 && mv dist/index.css dist/v0.0.1/bundle.css",
+    "postcss": "postcss dist/index.css > dist/index.min.css && rm dist/index.css",
+    "move": "mkdir dist/v0.0.1 && mv dist/index.min.css dist/v0.0.1/styles.min.css",
     "build": "npm run sass && npm run postcss && npm run move"
   },
   "repository": {
