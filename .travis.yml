@@ -25,6 +25,7 @@ jobs:
       deploy:
         provider: npm
         skip_cleanup: true
+        email: guilherme.albino.francisco@gmail.com
         api_key:
             secure: QWYivc2Hvq40eYG73wd6Y2XwG5Q6bHi46Ei3wwqNcueAQrzCmadogtN2WjZGeexiOYoSADzNO0rdDw6TfTTh4wK4Zc27rPgmvhdUl5G160aE90zRbzX51aVfd0+hEFwrlWLVfWI9jvEX9mXWtPvarURueWxW6wJ/lbTjqaANwEt/OU1arp95Z4rtRfx4W+w9SYtdh8BxA2Imscc4PrO9ZvnwHrG/LrRLoBqNZKHRQzmSkXTCFrAsE2QsFHlTmaqbShHr522Qb/w2ci4p9bRRXCN5yGJSjIPBqXiw0CmGWQuJaAleu4F+M4cFxzeoahaqnnG5gXp6ANhAOK8ElcjoFm0XoC0/ZthAL3on/+qinpHnuqStwYeI140xrTQLA0TkGq+2aFpYhwAJYO6o/xNgjm8aOBw6oTDFQbUB7K+mAtGfziJ6LR91Yuk6sDgBjFnnb4HoylX3DlrCsUMfZ+xzUYkzseM3ErptJA67Pdkaq8meiF0dZFF6aHck7Fop+sQrtiLXlDykgT9uYiUaqJGDBeEEWaT1LDL3VS35MBl4FrU08T2Zgj9JJtc+vVGjm5UHpI2ZObsgPCBUktPc2j5bPq2imAuBaxJOZ+m+0r4TDJocJ5loC5rmy7r3+HRpmaG8vMJR1ERHzo4iNdX9YLTe5MTwAao337K/sQ0rpdERaOM=
         on:
