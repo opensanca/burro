@@ -32,4 +32,14 @@ describe('Row Component', () => {
 
     expect(wrapper).toHaveHTML('<tr class="row hover"><td>test</td></tr>');
   });
+
+  it('should render with disabled class', () => {
+    const wrapper = shallow(
+      <Row isHover>
+        <td>test</td>
+      </Row>
+    );
+
+    expect(wrapper).toHaveHTML('<tr class="row disabled"><td>test</td></tr>');
+  });
 });
