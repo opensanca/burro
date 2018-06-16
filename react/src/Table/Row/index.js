@@ -8,8 +8,8 @@ const getClass = (isActive, isHover, isDisabled) => classnames({
   'disabled': isDisabled
 });
 
-export const Row = ({ children, isActive, isHover, isDisabled }) => (
-  <tr className={getClass(isActive, isHover, isDisabled)}>
+export const Row = ({ children, isActive, isHover, isDisabled, ...props }) => (
+  <tr className={getClass(isActive, isHover, isDisabled)} {...props}>
     { children }
   </tr>
 )
