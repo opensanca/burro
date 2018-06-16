@@ -9,6 +9,9 @@
     "move": "mkdir dist/v0.0.1 && mv dist/index.min.css dist/v0.0.1/styles.min.css",
     "build": "npm run sass && npm run postcss && npm run move"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/opensanca/burro.git"
