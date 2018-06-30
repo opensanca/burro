@@ -3,9 +3,6 @@
   "version": "0.0.1",
   "description": "A biblioteca de components do open sanca",
   "main": "index.js",
-  "watch": {
-    "build": "_sass/*.sass"
-  },
   "scripts": {
     "sass": "node-sass ./_sass/index.sass -o dist/",
     "postcss": "postcss dist/index.css > dist/index.min.css && rm dist/index.css",

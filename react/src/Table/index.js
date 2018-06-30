@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 export { Row } from './Row';
 export { Head } from './Head';
 export { Body } from './Body';
+export { Column } from './Column';
 
 export const Table = ({ children }) => (
   <table className="table">
