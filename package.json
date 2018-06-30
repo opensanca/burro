@@ -6,8 +6,10 @@
   "scripts": {
     "sass": "node-sass ./_sass/index.sass -o dist/",
     "postcss": "postcss dist/index.css > dist/index.min.css && rm dist/index.css",
+    "clear": "rm -rf dist",
     "move": "mkdir dist/v0.0.1 && mv dist/index.min.css dist/v0.0.1/styles.min.css",
-    "build": "npm run sass && npm run postcss && npm run move"
+    "build": "npm run clear && npm run sass && npm run postcss && npm run move",
+    "watch": "onchange \"_sass/**/*.sass\" -- npm run build"
   },
   "publishConfig": {
     "access": "public"
@@ -33,6 +35,8 @@
     "cdnjs-importer": "^2.0.0-beta",
     "cssnano": "^3.10.0",
     "node-sass": "^4.7.2",
+    "npm-watch": "^0.3.0",
+    "onchange": "^4.0.0",
     "postcss": "^6.0.16",
     "postcss-cli": "^4.1.1",
     "surge": "^0.19.0"
