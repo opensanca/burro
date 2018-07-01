@@ -1,0 +1,35 @@
+$media-queries: ('xs': 450px,'sm': 768px,'md': 990px,'lg': 1024px)
+$max-columns: 12
+$container-gutter: 10px
+$column-gutter: 16px
+
+.row
+  display: flex
+  flex-direction: row
+  flex: 1
+
+.col
+  box-sizing: border-box
+  flex-grow: 1
+  flex-direction: column
+  width: 100%
+  margin: $column-gutter/2
+  padding: $column-gutter/2
+
+.container
+  margin: 0 auto
+  padding: $container-gutter
+  width: 100%
+
+  @each $name, $media in $media-queries
+    @media screen and (min-width: $media)
+      max-width: $media
+
+@each $name, $media in $media-queries
+  @media screen and (min-width: $media)
+    .col-#{$name}-hidden
+      display: none
+
+    @for $size from 1 through $max-columns
+      .col-#{$name}-#{$size}
+        width: (100% / $max-columns) * $size
