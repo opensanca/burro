@@ -5,7 +5,7 @@ export { Column } from './Column';
 export { Row } from './Row';
 
 export const Grid = ({ children }) => (
-  <div className='container'>
+  <div className="container">
     { children }
   </div>
 );
