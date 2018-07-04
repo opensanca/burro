@@ -1,0 +1,49 @@
+$button-colors: ('primary': ('background': #00a8ff,'border': #0097e6), 'warning': ('background': #fbc531,'border': #e1b12c), 'danger': ('background': #e84118,'border': #c23616), 'success': ('background': #4cd137,'border': #44BD32), 'ghost': ('background': #ffffff,'border': #f5f6fa))
+$button-font-color: #f5f6fa
+$button-font-interpolate-color: #00a8ff
+
+.btn
+  box-sizing: border-box
+  padding: 10px 15px
+  border: 1px solid #ddd
+  border-radius: 5px
+  color: $button-font-color
+  cursor: pointer
+  transition: .6s
+
+  &.btn-circular
+    padding: 0px
+    width: 35px
+    line-height: 30px
+    text-align: center
+    border-radius: 50%
+    border-width: 2px
+
+  &.btn-block
+    width: 100%
+
+  &:hover
+    opacity: .65
+    transition: .6s
+
+@each $label, $opts in $button-colors
+  .btn.btn-#{$label}
+    background: map-get($opts, 'background')
+    border-color: map-get($opts, 'border')
+
+    @if $label == 'ghost'
+      color: $button-font-interpolate-color
+
+    &.btn-traced
+      background: transparent
+      border-color: map-get($opts, 'background')
+      color: map-get($opts, 'background')
+
+      &:hover
+        background: map-get($opts, 'background')
+        color: $button-font-color
+        opacity: 1
+
+        @if $label == 'ghost'
+          color: $button-font-interpolate-color
+
