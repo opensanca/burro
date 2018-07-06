@@ -1,12 +1,8 @@
-$button-colors: ('primary': ('background': #00a8ff,'border': #0097e6), 'warning': ('background': #fbc531,'border': #e1b12c), 'danger': ('background': #e84118,'border': #c23616), 'success': ('background': #4cd137,'border': #44BD32), 'ghost': ('background': #ffffff,'border': #f5f6fa))
-$button-font-color: #f5f6fa
-$button-font-interpolate-color: #00a8ff
-
 .btn
   box-sizing: border-box
-  padding: 10px 15px
-  border: 1px solid #ddd
-  border-radius: 5px
+  padding: $button-padding
+  border: $button-border-width solid #ddd
+  border-radius: $button-border-radius
   color: $button-font-color
   cursor: pointer
   transition: .6s

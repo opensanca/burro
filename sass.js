@@ -75,7 +75,7 @@ getSassFiles('themes')
         defaultContent != 'default' ?
           defaultContent + themes.content :
           themes.content,
-        indexContent, components, utils
+          utils, indexContent, components
       ].join('\n')
     }), {concurrency: 10});
   })
