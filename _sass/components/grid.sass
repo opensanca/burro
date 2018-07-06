@@ -3,20 +3,26 @@ $max-columns: 12
 $container-gutter: 10px
 $column-gutter: 16px
 
+@function get-col-size($size)
+  @return (100% / $max-columns) * $size
+
+
 .row
   display: flex
   flex-direction: row
-  flex: 1
+  flex: 0 1 auto
+  flex-wrap: wrap
 
 .col
   box-sizing: border-box
-  flex-grow: 1
+  flex: 0 0 auto
   flex-direction: column
-  width: 100%
+  width: calc(100% - #{$column-gutter})
   margin: $column-gutter/2
   padding: $column-gutter/2
 
 .container
+  box-sizing: border-box
   margin: 0 auto
   padding: $container-gutter
   width: 100%
@@ -32,4 +38,5 @@ $column-gutter: 16px
 
     @for $size from 1 through $max-columns
       .col-#{$name}-#{$size}
-        width: (100% / $max-columns) * $size
+        flex-basis: calc(#{get-col-size($size)} - #{$column-gutter})
+        max-width: calc(#{get-col-size($size)} - #{$column-gutter})
