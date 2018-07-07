@@ -3,13 +3,13 @@ import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 const getClass = (isActive, isHover, isDisabled) => classnames({
-  row: true,
+  trow: true,
   active: isActive,
   hover: isHover,
   disabled: isDisabled,
 });
 
-export const Row = ({
+export const TRow = ({
   children, isActive, isHover, isDisabled, ...props
 }) => (
   <tr className={getClass(isActive, isHover, isDisabled)} {...props}>
@@ -17,17 +17,17 @@ export const Row = ({
   </tr>
 );
 
-Row.propTypes = {
+TRow.propTypes = {
   children: PropTypes.node.isRequired,
   isActive: PropTypes.bool,
   isHover: PropTypes.bool,
   isDisabled: PropTypes.bool,
 };
 
-Row.defaultProps = {
+TRow.defaultProps = {
   isActive: false,
   isHover: false,
   isDisabled: false,
 };
 
-export default Row;
+export default TRow;
