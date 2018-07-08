@@ -1,37 +1,37 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { Row, Table, Head, Body, Column } from './';
+import { TRow, Table, Head, Body, TColumn } from './';
 
 storiesOf('Table', module)
-  .add('base usage', () => (
+  .addWithJSX('base usage', () => (
     <Table>
       <Head>
-        <Column header> Column 1 </Column>
-        <Column header> Column 2 </Column>
-        <Column header> Column 3 </Column>
+        <TColumn header> TColumn 1 </TColumn>
+        <TColumn header> TColumn 2 </TColumn>
+        <TColumn header> TColumn 3 </TColumn>
       </Head>
       <Body>
-        <Row>
-          <Column>1</Column>
-          <Column>This is a default row</Column>
-          <Column>one more!</Column>
-        </Row>
-        <Row isActive>
-          <Column>2</Column>
-          <Column>This is a with isActive</Column>
-          <Column>one more!</Column>
-        </Row>
-        <Row isHover>
-          <Column>3</Column>
-          <Column>This is a with isHover</Column>
-          <Column>one more!</Column>
-        </Row>
-        <Row isDisabled>
-          <Column>3</Column>
-          <Column>This is a with isDisabled</Column>
-          <Column>one more!</Column>
-        </Row>
+        <TRow>
+          <TColumn>1</TColumn>
+          <TColumn>This is a default row</TColumn>
+          <TColumn>one more!</TColumn>
+        </TRow>
+        <TRow isActive>
+          <TColumn>2</TColumn>
+          <TColumn>This is a with isActive</TColumn>
+          <TColumn>one more!</TColumn>
+        </TRow>
+        <TRow isHover>
+          <TColumn>3</TColumn>
+          <TColumn>This is a with isHover</TColumn>
+          <TColumn>one more!</TColumn>
+        </TRow>
+        <TRow isDisabled>
+          <TColumn>3</TColumn>
+          <TColumn>This is a with isDisabled</TColumn>
+          <TColumn>one more!</TColumn>
+        </TRow>
       </Body>
     </Table>
   ));

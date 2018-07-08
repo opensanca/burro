@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { Button } from './';
 
 storiesOf('Button', module)
-  .add('base colors', () => (
+  .addWithJSX('base colors', () => (
     <div>
       <div style={{ padding: '10px' }}>
         <Button kind="primary"> Primary </Button>
@@ -22,8 +22,8 @@ storiesOf('Button', module)
         <Button kind="ghost" block> Ghost </Button>
       </div>
     </div>
-  ))
-  .add('traced colors', () => (
+  ), { skip: 1 })
+  .addWithJSX('traced colors', () => (
     <div>
       <div style={{ padding: '10px' }}>
         <Button kind="primary" traced> Primary </Button>
@@ -41,8 +41,8 @@ storiesOf('Button', module)
         <Button kind="ghost" traced> Ghost </Button>
       </div>
     </div>
-  ))
-  .add('circular buttons', () => (
+  ), { skip: 1 })
+  .addWithJSX('circular buttons', () => (
     <div>
       <div style={{ padding: '10px' }}>
         <Button kind="primary" circular> P </Button>
@@ -75,4 +75,4 @@ storiesOf('Button', module)
         <Button kind="ghost" circular traced> G </Button>
       </div>
     </div>
-  ));
+  ), { skip: 1 });

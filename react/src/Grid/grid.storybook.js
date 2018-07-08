@@ -4,7 +4,7 @@ import { storiesOf } from '@storybook/react';
 import { Grid, Row, Column } from './';
 
 storiesOf('Grid', module)
-  .add('base usage', () => (
+  .addWithJSX('base usage', () => (
     <Grid>
       <Row>
         <Column md={2} style={{ background: '#f1f1f1' }}>

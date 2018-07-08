@@ -34,7 +34,8 @@
     "rollup": "^0.60.1",
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-uglify": "^4.0.0"
+    "rollup-plugin-uglify": "^4.0.0",
+    "storybook-addon-jsx": "^5.3.0"
   },
   "dependencies": {
     "babel-preset-latest": "^6.24.1",
