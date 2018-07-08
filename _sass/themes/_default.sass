@@ -1,16 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700')
 
-$main-theme-color: #00a8ff
+// Media Queries
+$media-queries: ('xs': 450px,'sm': 768px,'md': 990px,'lg': 1024px)
 
+// Colors
+$main-theme-color: #00a8ff
+$color-green: #4cd137
+$color-grey: #f5f6fa
+$color-white: #ffffff
+$color-black: #2f3640
+
+// Header
 $header-height: 60px
 
-$media-queries: ('xs': 450px,'sm': 768px,'md': 990px,'lg': 1024px)
+// Grid
 $max-columns: 12
 $container-gutter: 10px
 $column-gutter: 16px
 
-$button-colors: ('primary': ('background': $main-theme-color,'border': #0097e6), 'warning': ('background': #fbc531,'border': #e1b12c), 'danger': ('background': #e84118,'border': #c23616), 'success': ('background': #4cd137,'border': #44BD32), 'ghost': ('background': #ffffff,'border': #f5f6fa))
-$button-font-color: #f5f6fa
+// Table
+$table-box-shadow-color: $color-green
+$table-hover-box-shadow-opacity: 0.6
+$table-hover-box-shadow-size: 0 0 10px 1px
+$table-active-box-shadow-size: 0 0 5px 2px
+$table-border-radius: 5px
+$table-header-font-size: 14px
+$table-body-font-size: 12px
+
+// Button
+$button-colors: ('primary': ('background': $main-theme-color,'border': #0097e6), 'warning': ('background': #fbc531,'border': #e1b12c), 'danger': ('background': #e84118,'border': #c23616), 'success': ('background': $color-green,'border': #44BD32), 'ghost': ('background': $color-white,'border': $color-grey))
+$button-font-color: $color-grey
 $button-font-interpolate-color: $main-theme-color
 $button-border-width: 1px
 $button-border-radius: 5px

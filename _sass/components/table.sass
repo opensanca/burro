@@ -1,5 +1,5 @@
 .table
-  background: #f5f5f5
+  background: $color-grey
   border-collapse: separate
   border-spacing: 0px 10px
   width: 100%
@@ -7,20 +7,20 @@
 
   thead tr th
     text-align: left
-    font-size: 14px
+    font-size: $table-header-font-size
     padding: 0px 10px
-    color: #707070
+    color: $color-black
     font-weight: 600
 
   .trow
-    background: #FFF
+    background: $color-white
     cursor: pointer
 
     &:hover, &.hover
-      box-shadow: 0 0 10px 1px rgba(138, 195, 75, 0.5)
+      box-shadow: $table-hover-box-shadow-size transparentize($table-box-shadow-color, $table-hover-box-shadow-opacity)
 
     &.active
-      box-shadow: 0 0 5px 2px rgba(138, 195, 75, 1)
+      box-shadow: $table-active-box-shadow-size $table-box-shadow-color
 
     &.disabled
       opacity: 0.8
@@ -30,14 +30,14 @@
         box-shadow: none
 
     td
-      font-size: 12px
-      color: #707070
+      font-size: $table-body-font-size
+      color: $color-black
       padding: 10px
 
       &:first-child
-        border-top-left-radius: 5px
-        border-bottom-left-radius: 5px
+        border-top-left-radius: $table-border-radius
+        border-bottom-left-radius: $table-border-radius
 
       &:last-child
-        border-top-right-radius: 5px
-        border-bottom-right-radius: 5px
+        border-top-right-radius: $table-border-radius
+        border-bottom-right-radius: $table-border-radius
