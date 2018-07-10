@@ -1,19 +1,20 @@
 =input()
-  width: 100%
-  line-height: 40px
-  border: 2px solid $color-dark-grey
-  color: $color-black
   display: block
-  border-radius: 5px
   box-sizing: border-box
-  padding: 0 10px
-  background: #FFF
+  width: 100%
+  line-height: $input-height
+  border: $input-border-width solid $color-dark-grey
+  color: $color-black
+  border-radius: $input-border-radius
+  padding: $input-padding
+  background: $color-white
+  font-size: $input-font-size
 
 =out-box()
   width: 100%
   margin: 0
   padding: 0
-  background: #FFF
+  background: $color-white
   border-radius: $outbox-border-radius
   border: $outbox-border-size solid $outbox-border-color
   position: absolute
