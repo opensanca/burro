@@ -1,19 +1,52 @@
+.label
+  color: $color-dark-grey
+  font-size: $label-font-size
+  font-weight: $label-font-weight
+
 .input
   +input()
 
-  &:hover
+  &:focus
+    outline: none
     border-color: $main-theme-color
 
+    & + .label
+      color: $main-theme-color
+
 .input-group
+  position: relative;
+
+  &.has-label
+    padding-top: 20px;
+
+  & > .label
+    position: absolute
+    top: 0
+
+  & > .message
+    padding: 5px
+    margin: 0
+    list-style: none
+    font-size: $input-group-message-font-size
+
   &.success
+    & > .message, & > .label
+      color: $color-green
+
     & > .input
       border-color: $color-green
 
   &.error
+    & > .message, & > .label
+      color: $color-red
+
     & > .input
       border-color: $color-red
 
   &.warning
+    & > .message, & > .label
+      color: $color-yellow
+
     & > .input
       border-color: $color-yellow
 
