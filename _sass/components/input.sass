@@ -1,0 +1,22 @@
+.input
+  +input()
+
+  &:hover
+    border-color: $main-theme-color
+
+.input-group
+  &.success
+    & > .input
+      border-color: $color-green
+
+  &.error
+    & > .input
+      border-color: $color-red
+
+  &.warning
+    & > .input
+      border-color: $color-yellow
+
+  &.ghost
+    & > .input
+      border-color: transparentize($color-white, 0.5)
