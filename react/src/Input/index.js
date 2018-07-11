@@ -49,8 +49,8 @@ export const Input = ({
     <input className="input" id={id} {...otherProps} />
     { renderLabel(label, id) }
     <ul className="message">
-      {getMessages(error, warning, success).map((m, index) => (
-        <li key={index}>{m}</li>
+      {getMessages(error, warning, success).map(m => (
+        <li key={m.replace(/ /g, '').toLowerCase()}>{m}</li>
       ))}
     </ul>
   </div>
