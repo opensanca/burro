@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
 const messageType = PropTypes.oneOfType([
-  PropTypes.arrayOf(PropTypes.string), PropTypes.bool,
+  PropTypes.string, PropTypes.arrayOf(PropTypes.string), PropTypes.bool,
 ]);
 
 const normalize = (messages) => {
