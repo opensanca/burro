@@ -9,6 +9,10 @@ const getClass = open => classnames({
 
 const findText = (options, index) => options.filter(opt => opt.value === index)[0].text;
 
+const numberOrString = PropTypes.oneOfType([
+  PropTypes.string, PropTypes.number,
+]);
+
 export class Dropdown extends Component {
   constructor(props) {
     super(props);
@@ -40,6 +44,7 @@ export class Dropdown extends Component {
         key={option.value}
         className="option"
         onKeyPress={this.onClickWrapper(option.value)}
+        onClick={this.onClickWrapper(option.value)}
       >
         {option.text}
       </li>
@@ -49,7 +54,12 @@ export class Dropdown extends Component {
   render() {
     return (
       <div className={getClass(this.state.open)}>
-        <span role="presentation" className="text" onKeyPress={() => this.toggleOpen()}>
+        <span
+          role="presentation"
+          className="text"
+          onClick={() => this.toggleOpen()}
+          onKeyPress={() => this.toggleOpen()}
+        >
           {this.getText()}
         </span>
         <ul className="options">
@@ -60,19 +70,17 @@ export class Dropdown extends Component {
   }
 }
 
-Dropdown.prototype.propTypes = {
+Dropdown.propTypes = {
   options: PropTypes.arrayOf(PropTypes.shape({
-    value: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
+    value: numberOrString.isRequired,
+    text: numberOrString.isRequired,
   })).isRequired,
   onClick: PropTypes.func.isRequired,
-  selected: PropTypes.oneOf([
-    PropTypes.string, PropTypes.number,
-  ]),
+  selected: numberOrString,
   placeholder: PropTypes.string,
 };
 
-Dropdown.prototype.defaultProps = {
+Dropdown.defaultProps = {
   selected: null,
   placeholder: '',
 };
