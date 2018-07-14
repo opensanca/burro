@@ -28,4 +28,9 @@ storiesOf('Input', module)
     <div style={{ width: '500px', margin: '20px' }}>
       <Input label="Example Label" success={['Test Success Message']} id="test" />
     </div>
+  ), { skip: 1 })
+  .addWithJSX('ghost prop', () => (
+    <div style={{ background: '#00a8ff', width: '500px', padding: '20px' }}>
+      <Input label="Example Label" id="test" ghost />
+    </div>
   ), { skip: 1 });

@@ -15,12 +15,13 @@ const normalize = (messages) => {
   return [];
 };
 
-const getClassName = (error, warning, success, label) => classnames({
+const getClassName = (error, warning, success, label, ghost) => classnames({
   'input-group': true,
   'has-label': label !== '',
-  error,
   warning: !error && warning,
   success: !error && !warning && success,
+  ghost,
+  error,
 });
 
 const getMessages = (error, warning, success) => {
@@ -43,9 +44,9 @@ const renderLabel = (label, id) => {
 };
 
 export const Input = ({
-  error, warning, success, label, id, ...otherProps
+  error, warning, success, ghost, label, id, ...otherProps
 }) => (
-  <div className={getClassName(error, warning, success, label)}>
+  <div className={getClassName(error, warning, success, label, ghost)}>
     <input className="input" id={id} {...otherProps} />
     { renderLabel(label, id) }
     <ul className="message">
@@ -61,6 +62,7 @@ Input.propTypes = {
   warning: messageType,
   success: messageType,
   label: PropTypes.string,
+  ghost: PropTypes.bool,
   id: PropTypes.string.isRequired,
 };
 
@@ -68,6 +70,7 @@ Input.defaultProps = {
   error: false,
   warning: false,
   success: false,
+  ghost: false,
   label: '',
 };
 
