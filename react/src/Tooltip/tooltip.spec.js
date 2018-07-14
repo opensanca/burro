@@ -7,6 +7,6 @@ describe('Tooltip Component', () => {
     const child = 'foo';
     const text = 'bar';
     const wrapper = shallow(<Tooltip text={text}>{child}</Tooltip>);
-    expect(true).toBe(true);
+    expect(wrapper).toHaveClassName('tooltip');
   });
 });
