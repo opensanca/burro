@@ -9,15 +9,20 @@
     opacity: 0
     padding: $outbox-padding
     z-index: 2
+    left: 0
+    display: none
+
+    &.bottom
+      top: 200%
 
     &.top
-      bottom: calc(#{-200%} - 20px)
+      bottom: 200%
 
+    &.bottom
       &:after
         content: " "
-        position: absolute
         top: -10px
-        left: 10px
+        position: absolute
         border-left: 10px solid transparent
         border-right: 10px solid transparent
         border-bottom: 10px solid $color-dark-grey
@@ -27,13 +32,49 @@
         content: " "
         position: absolute
         top: -9px
-        left: 11px
         border-left: 9px solid transparent
         border-right: 9px solid transparent
         border-bottom: 9px solid #FFF
         z-index: 3
 
-        &.start
+    &.top
+      &:after
+        content: " "
+        bottom: -10px
+        position: absolute
+        border-left: 10px solid transparent
+        border-right: 10px solid transparent
+        border-top: 10px solid $color-dark-grey
+        z-index: 1
+
+      &:before
+        content: " "
+        position: absolute
+        bottom: -9px
+        border-left: 9px solid transparent
+        border-right: 9px solid transparent
+        border-top: 9px solid #FFF
+        z-index: 3
+
+    &.top, &.bottom
+      &.start
+        &:after
+          left: 10px
+        &:before
+          left: 11px
+
+      &.middle
+        &:after
+          left: calc(50% - 10px)
+        &:before
+          left: calc(50% - 9px)
+
+      &.end
+        &:after
+          right: 10px
+        &:before
+          right: 11px
 
   &:hover > .text
+    display: block
     opacity: 1
