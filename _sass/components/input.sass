@@ -51,5 +51,17 @@
       border-color: $color-yellow
 
   &.ghost
+    & > .label
+      color: transparentize($color-white, 0.35)
+
     & > .input
-      border-color: transparentize($color-white, 0.5)
+      background: transparent
+      border-color: transparentize($color-white, 0.35)
+      color: transparentize($color-white, 0.15)
+
+      &:focus
+        outline: none
+        border-color: $color-white
+
+        & + .label
+          color: $color-white
