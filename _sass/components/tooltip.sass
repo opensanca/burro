@@ -9,16 +9,11 @@
     opacity: 0
     padding: $outbox-padding
     z-index: 2
-    left: 0
     display: none
 
     &.bottom
       top: 200%
 
-    &.top
-      bottom: 200%
-
-    &.bottom
       &:after
         content: " "
         top: -10px
@@ -38,6 +33,8 @@
         z-index: 3
 
     &.top
+      bottom: 200%
+
       &:after
         content: " "
         bottom: -10px
@@ -56,7 +53,51 @@
         border-top: 9px solid #FFF
         z-index: 3
 
+    &.right
+      left: calc(100% + 15px)
+
+      &:after
+        content: " "
+        left: -10px
+        position: absolute
+        border-bottom: 10px solid transparent
+        border-right: 10px solid $color-dark-grey
+        border-top: 10px solid transparent
+        z-index: 1
+
+      &:before
+        content: " "
+        position: absolute
+        left: -9px
+        border-bottom: 9px solid transparent
+        border-right: 9px solid $color-white
+        border-top: 9px solid transparent
+        z-index: 3
+
+    &.left
+      right: calc(100% + 15px)
+
+      &:after
+        content: " "
+        right: -10px
+        position: absolute
+        border-bottom: 10px solid transparent
+        border-left: 10px solid $color-dark-grey
+        border-top: 10px solid transparent
+        z-index: 1
+
+      &:before
+        content: " "
+        position: absolute
+        right: -9px
+        border-bottom: 9px solid transparent
+        border-left: 9px solid $color-white
+        border-top: 9px solid transparent
+        z-index: 3
+
     &.top, &.bottom
+      left: 0
+
       &.start
         &:after
           left: 10px
@@ -74,6 +115,31 @@
           right: 10px
         &:before
           right: 11px
+
+    &.right, &.left
+        &.start
+          top: -10px
+
+          &:after
+            top: 11px
+          &:before
+            top: 12px
+
+        &.middle
+          top: -10px
+
+          &:after
+            top: calc(50% - 10px)
+          &:before
+            top: calc(50% - 9px)
+
+        &.end
+          bottom: -10px
+
+          &:after
+            bottom: 11px
+          &:before
+            bottom: 12px
 
   &:hover > .text
     display: block
