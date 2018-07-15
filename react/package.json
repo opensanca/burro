@@ -1,8 +1,8 @@
 {
   "name": "@opensanca/burro-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Biblioteca de Componentes React para o Burro",
-  "main": "index.js",
+  "main": "dist/bundle.min.js",
   "scripts": {
     "test": "BABEL_ENV=test jest --config config.jest.json --coverage",
     "test:dev": "BABEL_ENV=test jest --config config.jest.json --watch",
@@ -14,6 +14,9 @@
   "keywords": [
     "react"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "Guilherme Diego <guilherme@monumentum.io>",
   "license": "MIT",
   "devDependencies": {
