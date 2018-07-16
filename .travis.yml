@@ -28,7 +28,7 @@ jobs:
         skip_cleanup: true
         email: guilherme.albino.francisco@gmail.com
         api_key:
-            secure: regvB5QarxA6+JLW8T0o7X0WGuv7poBpB2TtWNExOZpnOc15jeU1aF0Bf3HhZWmhZf+nhGn2fj7iQ4PpBFrGnyc1diYdpvBqzO7JwcictdT79Z/qNtCEc1Or2u8VGwBM21wdDCuTnyIR88NzdhFVPX6VOmVZSj4qGgktabN9ZFcQinUvcTOOJ/hsa8pV0yoO/uw6PSoAXUjL21ZLabnbzGbSITQN43dxME6yC1eRgwNZdlNtUhy+C2H4FxvjLUIHGHnmnrvTZN2DgWVCZdq11X11BXrfPl/n7wXLmE05BkKKqYA/RdN3nEZD7flYh2VgtwILvxWqhpFfYauZrLozl6ySZK1angHjeTr9HzuyyLA+rxlJfTvrZ0MdgUTzUGQ5YFjshPuY9SUk0al+4AP7IVJ96H0uC85qlVsI/zTxwM7V6YmlYR6ooLN5T8YGpYdiEw3gSvGNo0jhSqelRI9DVlHLBpYCPAgI18uXQEXkKa7frksMi6d6FdwLlyqkq7apVWieCzPo0O1szP2vEWGCpNfo4hUPvXodFw/yd0dCCmSSRB5cv5UCPtAW1EOb+YZmS/MTcX2PWfBgSTXvmJ3Kg78s9IPWoCBi+FDE9uJhxC96BevDEzQMUplFFOQQnsyasM5Fcba+6Ompn6ZdfsfkgRZ7052ws38x5yGBsCg/F8s=
+            secure: bqPdFuzBswBkK6EiBz8hZWqsZVleiW9p+AKolrHC/m5t0zuqHJR1icxSMOzumSBp1q+pI+J5sIkl20RmgqPtRTebvx/rjlYNEKAcO7G5y9qNSMcr1IHv5VQ9p/WI21yFPifMkH0LSpTUpPNU8W7cPu1UUdbJq4BONal2lsxUhiDDTnGH6ZCKv1d64QzYuOLSAafEzS+ZgOTZW9N5+WkekKT4hNBIHHcRZIvWbESe/9GoxBFr2Q0DpgUzLh5+cvEDYBp7+GnmrAabN6R1zZ3jaZf+PJBz3zh8e+OOXzcZVS9pO7j7Eefnozkv1EPxRyibZ5dRL2BLk9vadfuBQQB3KoGxTL4sbnAho+/pcNQxkaCCasMy+lyv/tYoTSB+xau7R3kxf9PeUd/GqbALU/P1uO+fElu2nLcrvHpLC1Rphr9/sLBb+SkCqhi4TltNoRZ2gq3FsbxCnciyeh7QCFeY78qsKHvWComG0YtLK+vo/2SGgLoMqit4YkaefEV3aF5sPS15OndRjRM35UWR3w96Lvy1wbxihsG0nvWnH+BFHoe4O4FqAynw/An38GbAT6lN8ZhckeTiKkixFmhxhnHxpa0dTpVadFYzPrZT2xmDDefy1HMjMM5iC9gUESHKbbvT/vbYAz+334AJvpPOlxSMPfdgaFzZUdn83Bh7iiPCdxc=
         on:
           tags: true
 env:
