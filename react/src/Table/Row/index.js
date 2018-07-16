@@ -1,6 +1,6 @@
 import React from 'react';
-import classnames from 'classnames';
 import PropTypes from 'prop-types';
+const classnames = require('classnames');
 
 const getClass = (isActive, isHover, isDisabled) => classnames({
   trow: true,

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+
+const classnames = require('classnames');
 
 const messageType = PropTypes.oneOfType([
   PropTypes.string, PropTypes.arrayOf(PropTypes.string), PropTypes.bool,

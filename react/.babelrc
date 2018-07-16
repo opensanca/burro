@@ -10,6 +10,9 @@
                 "browsers": "last 4 years"
               }
           }]
+      ],
+      "plugins": [
+        "external-helpers"
       ]
     },
     "test": {

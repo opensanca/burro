@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import classnames from 'classnames';
+const classnames = require('classnames');
 
 const getClass = open => classnames({
   dropdown: true,
