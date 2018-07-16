@@ -1,10 +1,19 @@
 # DonkeyUI
 > dumb component oficial Opensanca
+
 ![22nct0](https://user-images.githubusercontent.com/10289071/34912085-64330040-f8be-11e7-99a2-dae4b520ded1.jpg)
+
 DonkeyUI se refere á uma biblioteca de UI Componentes do [Opensanca](https://www.opensanca.com.br)
+
 Todo projeto que necessita de uma User Interface pode se basear a partir desse projeto. 
 
 # Quick Start
+- Recomendamos usar a versão do node >= 8.6 (npm +5).
+- Fork/Clone o repositório completo do burro
+- cd react && npm install
+- Crie uma branch com prefixo `fix/ ou feature/` como o que será feito
+- quando acabar lembre de documentar no `storybook` e garatir que os testes estão prontos.
+- Crie um `Pull Request` para a master
 
 
 # Contributing to DonkeyUI
