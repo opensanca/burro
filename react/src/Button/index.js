@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const classnames = require('classnames');
+
 const DEFAULT_KIND = 'primary';
 const BTN_KINDS = [DEFAULT_KIND, 'warning', 'success', 'danger', 'ghost'];
 

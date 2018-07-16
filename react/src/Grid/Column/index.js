@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 const classnames = require('classnames');
 
 const INVALID_COL = 'auto';
