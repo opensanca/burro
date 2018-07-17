@@ -14,7 +14,7 @@ describe('Input Component', () => {
     const wrapper = shallow(<Input id="test" />);
 
     expect(wrapper)
-      .toHaveHTML('<div class="input-group"><input class="input" id="test"/><ul class="message"></ul></div>');
+      .toHaveHTML('<div class="input-group"><input class="input" id="test"/></div>');
   });
 
   it('should render with warning prop', () => {

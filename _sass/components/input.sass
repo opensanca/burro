@@ -5,6 +5,7 @@
 
 .input
   +input()
+  +placeholder(transparentize($color-white, 0.35))
 
   &:focus
     outline: none
@@ -14,10 +15,11 @@
       color: $main-theme-color
 
 .input-group
-  position: relative;
+  position: relative
+  width: 100%
 
   &.has-label
-    padding-top: 20px;
+    padding-top: 20px
 
   & > .label
     position: absolute

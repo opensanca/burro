@@ -44,17 +44,29 @@ const renderLabel = (label, id) => {
   );
 };
 
+const renderMessage = (error, warning, success) => {
+  const messages = getMessages(error, warning, success);
+
+  if (messages.length === 0) {
+    return null;
+  }
+
+  return (
+    <ul className="message">
+      {messages.map(m => (
+        <li key={m.replace(/ /g, '').toLowerCase()}>{m}</li>
+      ))}
+    </ul>
+  );
+};
+
 export const Input = ({
   error, warning, success, ghost, label, id, ...otherProps
 }) => (
   <div className={getClassName(error, warning, success, label, ghost)}>
     <input className="input" id={id} {...otherProps} />
     { renderLabel(label, id) }
-    <ul className="message">
-      {getMessages(error, warning, success).map(m => (
-        <li key={m.replace(/ /g, '').toLowerCase()}>{m}</li>
-      ))}
-    </ul>
+    { renderMessage(error, warning, success) }
   </div>
 );
 
