@@ -4,13 +4,23 @@
   flex: 0 1 auto
   flex-wrap: wrap
 
+  &.reverse
+    flex-direction: row-reverse
+
 .col
+  display: flex
   box-sizing: border-box
   flex: 0 0 auto
-  flex-direction: column
   width: calc(100% - #{$column-gutter})
-  margin: $column-gutter/2
-  padding: $column-gutter/2
+  margin: 0 $column-gutter/2
+  padding: 0 $column-gutter/2
+
+  @each $place in (flex-start, flex-end, center, space-between, space-around, space-evenly)
+    &.col-align-#{$place}
+      align-items: $place
+
+    &.col-justify-#{$place}
+      justify-content: $place
 
 .container
   box-sizing: border-box
@@ -25,7 +35,11 @@
 @each $name, $media in $media-queries
   @media screen and (min-width: $media)
     .col-#{$name}-hidden
-      display: none
+      flex-basis: 0px
+      max-width: 0px
+      padding: 0px
+      margin: 0px
+      overflow: hidden
 
     @for $size from 1 through $max-columns
       .col-#{$name}-#{$size}
