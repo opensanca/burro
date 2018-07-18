@@ -18,3 +18,14 @@
   border-radius: $outbox-border-radius
   border: $outbox-border-size solid $outbox-border-color
   position: absolute
+
+=placeholder($color)
+  &::placeholder
+    color: $color
+    opacity: 1
+
+  &:-ms-input-placeholder
+    color: $color
+
+  &::-ms-input-placeholder
+    color: $color
