@@ -35,7 +35,7 @@ HeaderButton.propTypes = {
 HeaderLayout.propTypes = {
   children: PropTypes.node,
   logo: PropTypes.string.isRequired,
-  buttons: PropTypes.arrayOf(PropTypes.shapeOf(HeaderButton.propTypes)),
+  buttons: PropTypes.arrayOf(PropTypes.shape(HeaderButton.propTypes)),
 };
 
 HeaderLayout.defaultProps = {
