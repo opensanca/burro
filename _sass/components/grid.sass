@@ -1,47 +1,54 @@
-.row
+.flex
   display: flex
-  flex-direction: row
-  flex: 0 1 auto
   flex-wrap: wrap
-
-  &.reverse
-    flex-direction: row-reverse
-
-.col
-  display: flex
   box-sizing: border-box
-  flex: 0 0 auto
-  width: calc(100% - #{$column-gutter})
-  margin: 0 $column-gutter/2
-  padding: 0 $column-gutter/2
 
   @each $place in (flex-start, flex-end, center, space-between, space-around, space-evenly)
-    &.col-align-#{$place}
+    &.align-items-#{$place}
       align-items: $place
 
-    &.col-justify-#{$place}
+    &.align-content-#{$place}
+      align-content: $place
+
+    &.justify-content-#{$place}
       justify-content: $place
 
-.container
-  box-sizing: border-box
-  margin: 0 auto
-  padding: $container-gutter
-  width: 100%
+  @each $direction in (row, column, row-reverse, column-reverse)
+    &.direction-#{$direction}
+      flex-direction: $direction
 
-  @each $name, $media in $media-queries
-    @media screen and (min-width: $media)
-      max-width: $media
+  &.row
+    width: 100%
+    flex: 0 1 auto
 
-@each $name, $media in $media-queries
-  @media screen and (min-width: $media)
-    .col-#{$name}-hidden
-      flex-basis: 0px
-      max-width: 0px
-      padding: 0px
-      margin: 0px
-      overflow: hidden
+  &.col
+    flex: 0 0 auto
+    width: calc(100% - #{$column-gutter})
+    margin: 0 $column-gutter/2
+    padding: 0 $column-gutter/2
 
-    @for $size from 1 through $max-columns
-      .col-#{$name}-#{$size}
-        flex-basis: calc(#{get-col-size($size)} - #{$column-gutter})
-        max-width: calc(#{get-col-size($size)} - #{$column-gutter})
+    @each $name, $media in $media-queries
+      @media screen and (min-width: $media)
+        &.col-#{$name}-hidden
+          flex-basis: 0px
+          max-width: 0px
+          padding: 0px
+          margin: 0px
+          overflow: hidden
+
+        @for $size from 1 through $max-columns
+          &.col-#{$name}-#{$size}
+            flex-basis: calc(#{get-col-size($size)} - #{$column-gutter})
+            max-width: calc(#{get-col-size($size)} - #{$column-gutter})
+
+  &.container
+    margin: 0 auto
+    padding: $container-gutter
+    width: 100%
+
+    &.hero
+      min-height: 100vh
+
+    @each $name, $media in $media-queries
+      @media screen and (min-width: $media)
+        max-width: $media
