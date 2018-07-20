@@ -18,4 +18,11 @@ storiesOf('Grid', module)
         </Column>
       </Row>
     </Grid>
+  ))
+  .addWithJSX('hero usage', () => (
+    <Grid hero>
+      <Row>
+        HERO
+      </Row>
+    </Grid>
   ));

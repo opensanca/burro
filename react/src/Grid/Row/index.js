@@ -1,14 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import Flex from '../Flex';
 
-export const Row = ({ children, ...otherProps }) => (
-  <div className="row" {...otherProps}>
-    { children }
-  </div>
+export const Row = (props) => (
+  <Flex className="row" {...props} />
 );
-
-Row.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default Row;
