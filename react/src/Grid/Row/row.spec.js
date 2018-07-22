@@ -3,11 +3,9 @@ import { shallow } from 'enzyme';
 import { Row } from './';
 
 describe('Row Component', () => {
-  const text = 'alo';
-
   it('should render with defaults', () => {
-    const wrapper = shallow(<Row>{text}</Row>);
+    const wrapper = shallow(<Row />);
 
-    expect(wrapper).toHaveHTML(`<div class='row'>${text}</div>`);
+    expect(wrapper).toHaveClassName('row');
   });
 });

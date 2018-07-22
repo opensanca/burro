@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const cx = require('classnames');
+
 const DEFAULT_ALIGMENT = 'flex-start';
 const FLEX_ALIGNMENTS = [DEFAULT_ALIGMENT, 'flex-end', 'center', 'space-between', 'space-around', 'space-evenly'];
 const FLEX_DIRECTIONS = ['row', 'column', 'reverse-column', 'reverse-row'];
 
 const getClass = (direction, alignItems, alignContent, justifyContent, className) => cx({
-  'flex': true,
+  flex: true,
   [className]: true,
   [`direction-${direction}`]: direction,
   [`align-items-${alignItems}`]: true,
@@ -24,11 +25,13 @@ export const Flex = ({
   children,
   ...otherProps
 }) => (
-  <div {...otherProps}
-    className={getClass(direction, alignItems, alignContent, justifyContent, className)}>
+  <div
+    {...otherProps}
+    className={getClass(direction, alignItems, alignContent, justifyContent, className)}
+  >
     { children }
   </div>
-)
+);
 
 Flex.propTypes = {
   className: PropTypes.string,
