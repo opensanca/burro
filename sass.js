@@ -67,7 +67,19 @@ getSassFiles('themes')
       utils: getCompactedContent('utils', utils)
     }));
   })
-  .then(({ themes, components, utils }) => {
+  .then((config) => {
+    return getSassFiles('utils').then((utils) => ({
+      ...config,
+      utils: getCompactedContent('utils', utils)
+    }));
+  })
+  .then((config) => {
+    return getSassFiles('layouts').then((layouts) => ({
+      ...config,
+      layouts: getCompactedContent('layouts', layouts)
+    }));
+  })
+  .then(({ themes, components, utils, layouts }) => {
     const defaultContent = themes.filter(({ name }) => name === 'default')[0].content;
     return Promise.map(themes, (theme) => ({
       file: theme.name,
@@ -75,7 +87,7 @@ getSassFiles('themes')
         defaultContent != 'default' ?
           defaultContent + themes.content :
           themes.content,
-          utils, indexContent, components
+          utils, indexContent, components, layouts
       ].join('\n')
     }), {concurrency: 10});
   })

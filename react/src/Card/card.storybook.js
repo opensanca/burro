@@ -5,7 +5,7 @@ import { Card } from './';
 
 storiesOf('Card', module)
   .addWithJSX('base usage', () => (
-    <div style={{background: '#f1f1f1', padding: '20px'}}>
+    <div style={{ background: '#f1f1f1', padding: '20px' }}>
       <Card>
         Card Example
       </Card>
