@@ -3,6 +3,9 @@ header.header
   height: $header-height
   background: $main-theme-color
 
-  .logo
-    height: 30px
-    margin-top: 7px
+  .col
+    height: $header-logo-height + ($header-logo-margin * 2)
+
+    .logo
+      height: $header-logo-height
+      margin-top: $header-logo-margin

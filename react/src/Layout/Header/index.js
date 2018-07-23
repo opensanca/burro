@@ -5,8 +5,8 @@ import { Grid, Row, Column } from '../../Grid';
 import { Header } from '../../Header';
 import { Button } from '../../Button';
 
-const HeaderButton = ({ children, onClick }) => (
-  <Button circular traced kind="ghost" onClick={onClick}>
+const HeaderButton = ({ children, id, onClick }) => (
+  <Button circular traced kind="ghost" key={id} onClick={onClick}>
     { children }
   </Button>
 );
@@ -19,7 +19,7 @@ export const HeaderLayout = ({ children, logo, buttons }) => (
           <img className="logo" src={logo} alt="Header Logo" />
         </Column>
         <Column xs="hidden" md={6}> { children } </Column>
-        <Column xs={5} md={3} align="center" justify="flex-end">
+        <Column xs={5} md={3} alignItems="center" justifyContent="flex-end">
           { buttons.map(HeaderButton) }
         </Column>
       </Row>
@@ -30,6 +30,10 @@ export const HeaderLayout = ({ children, logo, buttons }) => (
 HeaderButton.propTypes = {
   children: PropTypes.node.isRequired,
   onClick: PropTypes.func.isRequired,
+  id: PropTypes.oneOfType([
+    PropTypes.number.isRequired,
+    PropTypes.string.isRequired,
+  ]).isRequired,
 };
 
 HeaderLayout.propTypes = {
