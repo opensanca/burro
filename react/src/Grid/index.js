@@ -8,18 +8,24 @@ export { Row } from './Row';
 
 const cx = require('classnames');
 
-const getClass = hero => cx({ container: true, hero });
+const getClass = (hero, className) => cx({
+  container: true,
+  [className]: className !== '',
+  hero,
+});
 
-export const Grid = ({ hero, ...props }) => (
-  <Flex className={getClass(hero)} {...props} />
+export const Grid = ({ hero, className, ...props }) => (
+  <Flex className={getClass(hero, className)} {...props} />
 );
 
 Grid.propTypes = {
   hero: PropTypes.bool,
+  className: PropTypes.string,
 };
 
 Grid.defaultProps = {
   hero: false,
+  className: '',
 };
 
 export default Grid;

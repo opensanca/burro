@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { HeaderLayout, DashboardLayout } from './';
+import { HeaderLayout, LoginLayout, DashboardLayout } from './';
 import { Input } from '../Input';
 
 const LOGO = 'https://i.imgur.com/4tsbdjB.png';
@@ -24,4 +24,16 @@ storiesOf('Layouts', module)
     >
       My Body!
     </DashboardLayout>
+  ))
+  .addWithJSX('Login Layout', () => (
+    <LoginLayout
+      user=""
+      userLabel="User"
+      userOnChange={() => false}
+      pass=""
+      passLabel="Password"
+      passOnChange={() => false}
+      buttonChildren="Sign In"
+      onSubmit={() => false}
+    />
   ));
