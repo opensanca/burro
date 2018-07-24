@@ -1,6 +1,6 @@
 {
   "name": "burro",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A biblioteca de components do open sanca",
   "main": "index.js",
   "scripts": {

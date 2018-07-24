@@ -1,6 +1,6 @@
 {
   "name": "@opensanca/burro-react",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Biblioteca de Componentes React para o Burro",
   "main": "dist/bundle.min.js",
   "scripts": {
