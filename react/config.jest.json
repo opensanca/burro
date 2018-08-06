@@ -5,6 +5,7 @@
   "moduleDirectories": [
     "node_modules"
   ],
+  "testURL": "http://localhost/",
   "coverageDirectory": "coverage",
   "coveragePathIgnorePatterns": [
       "<rootDir>/node_modules/",
