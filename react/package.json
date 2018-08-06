@@ -1,6 +1,6 @@
 {
   "name": "@opensanca/burro-react",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Biblioteca de Componentes React para o Burro",
   "main": "dist/bundle.min.js",
   "scripts": {
@@ -24,7 +24,6 @@
     "babel-jest": "^23.0.1",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
-    "classnames": "^2.2.6",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.19.1",
@@ -43,6 +42,7 @@
   },
   "dependencies": {
     "babel-preset-latest": "^6.24.1",
+    "classnames": "^2.2.6",
     "prop-types": "^15.6.1",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"

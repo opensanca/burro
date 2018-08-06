@@ -8,12 +8,13 @@ import { Button } from '../../Button';
 export const LoginLayout = ({
   user, userOnChange, userLabel,
   pass, passOnChange, passLabel,
-  buttonChildren, onSubmit,
+  buttonChildren, onSubmit, children,
 }) => (
   <Grid hero className="login-screen" alignItems="center">
     <Row justifyContent="center">
       <Column md={6}>
         <Card block>
+          { children }
           <Input
             id="user"
             value={user}
@@ -35,6 +36,7 @@ export const LoginLayout = ({
 );
 
 LoginLayout.propTypes = {
+  children: PropTypes.node,
   user: PropTypes.string.isRequired,
   userOnChange: PropTypes.func.isRequired,
   userLabel: PropTypes.string.isRequired,
@@ -43,6 +45,10 @@ LoginLayout.propTypes = {
   passLabel: PropTypes.string.isRequired,
   buttonChildren: PropTypes.node.isRequired,
   onSubmit: PropTypes.func.isRequired,
+};
+
+LoginLayout.defaultProps = {
+  children: null,
 };
 
 export default LoginLayout;

@@ -5,5 +5,6 @@ export * from './Input';
 export * from './Table';
 export * from './Header';
 export * from './Grid';
+export * from './Card';
 
 export * from './Layout';
