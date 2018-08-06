@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - '8'
+  - '9'
 cache:
   directories:
     - ./node_modules
@@ -20,7 +20,7 @@ jobs:
         on:
           tags: true
     - stage: react
-      script: npm i -g jest-cli && cd react && npm run test && npm run lint
+      script: cd react && npm run test && npm run lint
       before_deploy:
         - npm run build
       deploy:
