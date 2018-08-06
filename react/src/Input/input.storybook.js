@@ -6,7 +6,7 @@ import { Input } from './';
 class TestInput extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { value: '' }
+    this.state = { value: '' };
   }
 
   onChange(value) {
@@ -14,7 +14,7 @@ class TestInput extends React.Component {
   }
 
   render() {
-    return (<Input id="test" value={this.state.value} onChange={(e) => this.onChange(e.target.value)} />)
+    return (<Input id="test" value={this.state.value} onChange={e => this.onChange(e.target.value)} />);
   }
 }
 
