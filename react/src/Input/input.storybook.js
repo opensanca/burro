@@ -3,6 +3,21 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { Input } from './';
 
+class TestInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: '' }
+  }
+
+  onChange(value) {
+    this.setState({ value });
+  }
+
+  render() {
+    return (<Input id="test" value={this.state.value} onChange={(e) => this.onChange(e.target.value)} />)
+  }
+}
+
 storiesOf('Input', module)
   .addWithJSX('base usage', () => (
     <div style={{ width: '500px', margin: '20px' }}>
@@ -32,5 +47,10 @@ storiesOf('Input', module)
   .addWithJSX('ghost prop', () => (
     <div style={{ background: '#00a8ff', width: '500px', padding: '20px' }}>
       <Input label="Example Label" id="test" ghost />
+    </div>
+  ), { skip: 1 })
+  .addWithJSX('wrapped with status usage', () => (
+    <div style={{ width: '500px', margin: '20px' }}>
+      <TestInput />
     </div>
   ), { skip: 1 });
