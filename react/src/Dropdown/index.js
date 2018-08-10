@@ -22,6 +22,7 @@ export class Dropdown extends Component {
 
   onClickWrapper(value) {
     this.props.onClick(value);
+    this.toggleOpen();
   }
 
   getText() {
@@ -44,8 +45,8 @@ export class Dropdown extends Component {
         role="menuitem"
         key={option.value}
         className="option"
-        onKeyPress={this.onClickWrapper(option.value)}
-        onClick={this.onClickWrapper(option.value)}
+        onKeyPress={() => this.onClickWrapper(option.value)}
+        onClick={() => this.onClickWrapper(option.value)}
       >
         {option.text}
       </li>
