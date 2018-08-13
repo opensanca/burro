@@ -26,6 +26,7 @@ describe('Dropdown Component', () => {
 
     wrapper.find('span.text').simulate(event);
     expect(wrapper.find('.dropdown.active')).toExist();
+    return wrapper;
   };
 
   beforeEach(() => {
@@ -38,6 +39,12 @@ describe('Dropdown Component', () => {
 
   it('should render with defaults and keyPress', () => {
     testBase('keyPress');
+  });
+
+  it('should exec click on li', () => {
+    const wrapper = testBase('click');
+    wrapper.find('li').first().simulate('click');
+    wrapper.find('li').first().simulate('keyPress');
   });
 
   it('should render with select option', () => {
