@@ -13,7 +13,7 @@ const ON_CLICK = () => false;
 class DropContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { selected: null, options: OPTIONS }
+    this.state = { selected: null, options: OPTIONS };
   }
 
   onClick(selected) {
@@ -22,9 +22,13 @@ class DropContainer extends React.Component {
 
   render() {
     return (
-      <Dropdown selected={this.state.selected} options={this.state.options}
-        placeholder='Foo Bar Placeholder' onClick={ (selected) => this.onClick(selected) }/>
-    )
+      <Dropdown
+        selected={this.state.selected}
+        options={this.state.options}
+        placeholder="Foo Bar Placeholder"
+        onClick={selected => this.onClick(selected)}
+      />
+    );
   }
 }
 
