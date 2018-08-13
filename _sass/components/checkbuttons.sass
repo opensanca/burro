@@ -6,12 +6,18 @@
     display: none
 
   & .item
+    width: 20px
+    height: 20px
     position: relative
     background: $color-grey
 
     &:before, &:after
-        opacity: 0
-        transition: .3s
+      content: " "
+      background: #FFF
+      display: block
+      position: absolute
+      opacity: 0
+      transition: .3s
 
   & .item, & .label
     display: inline-block
@@ -34,15 +40,7 @@
 
   &.checkbox
     & .item
-      width: 20px;
-      height: 20px;
       border-radius: 5px
-
-      &:before, &:after
-        content: " "
-        background: #FFF
-        display: block
-        position: absolute
 
       &:before
         width: 7px
@@ -57,3 +55,29 @@
         top: 8px
         left: 7px
         transform: rotateZ(-45deg)
+
+  &.radiobox
+    & .item
+      border-radius: 50%
+
+      &:before, &:after
+        opacity: 1
+
+      &:before
+        width: 14px
+        height: 14px
+        border-radius: 50%
+        left: 3px
+        top: 3px
+
+      &:after
+        background: $color-grey
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        left: 6px
+        top: 6px
+        z-index: 1
+
+    &.active .item:after
+      background: $main-theme-color

@@ -6,5 +6,7 @@ export * from './Table';
 export * from './Header';
 export * from './Grid';
 export * from './Card';
+export * from './CheckBox';
+export * from './RadioBox';
 
 export * from './Layout';
