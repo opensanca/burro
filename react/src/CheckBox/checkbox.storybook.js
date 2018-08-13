@@ -32,21 +32,21 @@ class CheckboxContainer extends React.Component {
 
     return (
       <div>
-        <CheckBox selected={selected} label="One" onChange={this.toggle} />
-        <CheckBox selected={selected} label="Two" onChange={this.toggle} />
+        <CheckBox selected={selected} value="one" label="One" onChange={this.toggle} />
+        <CheckBox selected={selected} value="two" label="Two" onChange={this.toggle} />
       </div>
     );
   }
 }
 
-storiesOf('CheckButton', module)
-  .addWithJSX('checkbox base usage', () => (
+storiesOf('CheckBox', module)
+  .addWithJSX('base usage', () => (
     <div style={{ width: '500px', margin: '20px' }}>
-      <CheckBox selected={SELECTED} label={SELECTED[0]} onChange={NOP} />
-      <CheckBox selected={SELECTED} label="two" onChange={NOP} />
+      <CheckBox selected={SELECTED} value={SELECTED[0]} label="One" onChange={NOP} />
+      <CheckBox selected={SELECTED} value="two" label="Two" onChange={NOP} />
     </div>
   ), { skip: 1 })
-  .addWithJSX('checkbox container', () => (
+  .addWithJSX('container', () => (
     <div style={{ width: '500px', margin: '20px' }}>
       <CheckboxContainer />
     </div>

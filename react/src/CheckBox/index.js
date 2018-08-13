@@ -7,11 +7,12 @@ const getClass = isChecked => `checkbutton checkbox ${isChecked ? 'active' : ''}
 
 export const CheckBox = ({
   label,
+  value,
   selected,
   onChange,
 }) => {
-  const isChecked = isCheckedFn(label, selected);
-  const id = `check-${label}`;
+  const isChecked = isCheckedFn(value, selected);
+  const id = `check-${value}`;
 
   return (
     <div className={getClass(isChecked)}>
@@ -19,7 +20,7 @@ export const CheckBox = ({
         <div className="item" />
         <input
           type="checkbox"
-          value={label}
+          value={value}
           checked={isChecked}
           onChange={onChange}
           id={id}
@@ -35,6 +36,10 @@ CheckBox.propTypes = {
   selected: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.array,
+  ]).isRequired,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
   ]).isRequired,
   onChange: PropTypes.func.isRequired,
 };
