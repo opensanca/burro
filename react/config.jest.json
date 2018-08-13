@@ -9,7 +9,8 @@
   "coverageDirectory": "coverage",
   "coveragePathIgnorePatterns": [
       "<rootDir>/node_modules/",
-      "<rootDir>/src/Layout"
+      "<rootDir>/src/Layout",
+      "<rootDir>/src/CheckButtons/index.js"
   ],
   "setupTestFrameworkScriptFile": "./testSetup",
   "testMatch": [

@@ -1,0 +1,59 @@
+.checkbutton
+  & > label
+    cursor: pointer
+
+  & input
+    display: none
+
+  & .item
+    position: relative
+    background: $color-grey
+
+    &:before, &:after
+        opacity: 0
+        transition: .3s
+
+  & .item, & .label
+    display: inline-block
+    vertical-align: top
+
+  & .label
+    padding: 4px 5px
+    line-height: 12px
+
+  &.active
+    & .item
+      background: $main-theme-color
+
+      &:before, &:after
+        opacity: 1
+        transition: .3s
+
+    & .label
+      color: $color-black
+
+  &.checkbox
+    & .item
+      width: 20px;
+      height: 20px;
+      border-radius: 5px
+
+      &:before, &:after
+        content: " "
+        background: #FFF
+        display: block
+        position: absolute
+
+      &:before
+        width: 7px
+        height: 3px
+        top: 9px
+        left: 4px
+        transform: rotateZ(45deg)
+
+      &:after
+        width: 10px
+        height: 3px
+        top: 8px
+        left: 7px
+        transform: rotateZ(-45deg)
