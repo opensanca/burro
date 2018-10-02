@@ -29,6 +29,7 @@
   },
   "homepage": "https://github.com/opensanca/burro#readme",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.1.0",
     "autoprefixer": "^7.2.5",
     "bluebird": "^3.5.1",
     "cdnjs-importer": "^2.0.0-beta",
