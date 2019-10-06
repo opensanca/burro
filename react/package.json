@@ -33,6 +33,7 @@
     "eslint-plugin-react": "7.9.1",
     "jest": "23.1.0",
     "jest-enzyme": "6.0.1",
+    "prettier": "1.18.2",
     "rollup": "0.60.1",
     "rollup-plugin-babel": "3.0.4",
     "rollup-plugin-commonjs": "9.1.3",
